@@ -12,6 +12,10 @@
             <h1>NAME: ${data.courseName}</h1>
             <h2>DEPT: ${data.dept}</h2>
             <p>Instructor: ${data.instructor}</p>
+            <p>Start Date: ${data.startDate}</p>
+            <p>Duration: ${data.numDays} day${ data.numDays == 1 ? "" : "s" }.</p>
+            <p>Course Number: ${data.courseNum}</p>
+            <p>ID: ${data.id}</p>
         `;
     }
     // console.log(location.search)
@@ -30,6 +34,9 @@
         // Hint: you can create the URL you need for
         // the ajax request by concatenating
         // "http://localhost:8081pi/courses/" with the id!
+    }
+
+    if(id !== -1){ //is it found by .has() above
         getDetails(id)
     }
 </script>
